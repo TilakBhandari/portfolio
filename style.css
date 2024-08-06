@@ -1,0 +1,179 @@
+:root {
+  --primary-black: #0b0b0b;
+  --secondary-golden: #cd9c20;
+  --tertiary-rey: #333533;
+  --color_goldy: #f5cb5c;
+  --shadow: 5x 5px 15px 0px white;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container1 {
+  width: 90%;
+
+  margin: auto;
+}
+
+.herobg {
+  background: var(--primary-black);
+  background-size: cover;
+  height: 100vh;
+
+  width: 100%;
+  color: white;
+}
+
+/* Header  */
+
+header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.navbar ul {
+  gap: 2rem;
+  display: flex;
+}
+.navbar li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: goldenrod;
+  border-bottom: 3px solid;
+
+  border-color: goldenrod;
+}
+.navbar .current {
+  border-bottom: 3px solid;
+
+  border-color: goldenrod;
+}
+.logo {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Helttox Brush", sans-serif;
+}
+.btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: 0px;
+  background: goldenrod;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.photo img {
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  height: 60vh;
+  border-radius: 0% 0% 50% 50%;
+}
+
+.photo img:hover {
+  transform: scale(0.98);
+  filter: grayscale(0.3);
+  filter: brightness(0.9);
+  filter: opacity(0.9);
+}
+.photo .img-bg {
+  height: 60vh;
+  aspect-ratio: 1/1;
+  background: var(--color_goldy);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 50%;
+  flex-grow: 2;
+  max-width: 550px;
+  margin-right: 3rem;
+}
+
+.intro {
+  height: 50%;
+}
+.content h1 {
+  font-size: 4rem;
+  font-family: "Edit Undo BRK", sans-serif;
+
+  padding: 2px;
+  margin: 0;
+  text-align: start;
+}
+.content h2 {
+  font-size: 4rem;
+  font-family: "Edit Undo BRK", sans-serif;
+
+  padding: 2px;
+  margin: 0;
+  text-align: end;
+}
+.content h4 {
+  float: inline-end;
+  font-family: monospace;
+}
+
+.socials {
+  width: 4rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+.socials i {
+  transform: scale(1.7);
+  margin: 1rem;
+  color: white;
+}
+.socials i:hover {
+  transform: scale(2.05);
+  color: goldenrod;
+}
+
+.photo {
+  flex-grow: 1;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button  */
+.btn {
+  background: var(--color_goldy);
+}
+.btn:hover {
+  background-color: goldenrod;
+  color: white;
+  transform: scale(1.04);
+  box-shadow: -4px 4px 0.5px 0px rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: 2rem;
+}
