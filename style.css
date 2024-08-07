@@ -44,13 +44,34 @@ header {
   display: flex;
 }
 .navbar li:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   cursor: pointer;
   color: goldenrod;
-  border-bottom: 3px solid;
+  border-bottom: goldenrod solid;
 
-  border-color: goldenrod;
+  border-color: 3px goldenrod;
+  transition: all 0.3s linear;
 }
+/* .navbar li:hover {
+  animation: navborder 1s infinite linear;
+  border-radius: 5px;
+}
+
+@keyframes navborder {
+  0% {
+    border-bottom: goldenrod solid;
+  }
+  25% {
+    border-left: goldenrod solid;
+  }
+  50% {
+    border-top: goldenrod solid;
+  }
+  100% {
+    border-right: goldenrod solid;
+  }
+} */
+
 .navbar .current {
   border-bottom: 3px solid;
 
@@ -69,16 +90,26 @@ header {
   background: goldenrod;
 }
 
+/* Hero Section  */
+
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
+.photo {
+  position: relative;
+  right: 5vw;
+
+  height: 50vh;
+}
+
 .photo img {
+  height: 50vh;
   aspect-ratio: 3/4;
   object-fit: contain;
-  height: 60vh;
+
   border-radius: 0% 0% 50% 50%;
 }
 
@@ -89,7 +120,7 @@ header {
   filter: opacity(0.9);
 }
 .photo .img-bg {
-  height: 60vh;
+  height: 50vh;
   aspect-ratio: 1/1;
   background: var(--color_goldy);
   border-radius: 50%;
@@ -148,8 +179,9 @@ header {
   color: white;
 }
 .socials i:hover {
-  transform: scale(2.05);
+  transform: scale(2.2);
   color: goldenrod;
+  transition: transform 0.5s linear;
 }
 
 .photo {
@@ -169,11 +201,62 @@ header {
   color: white;
   transform: scale(1.04);
   box-shadow: -4px 4px 0.5px 0px rgba(255, 255, 255, 0.5);
+  transition: background 1s ease-in 0s;
+  transition: box-shadow 0.2s ease-in 0s;
+  border-width: 3px;
+  /* animation: btnborder; */
 }
+/* @keyframes btnborder {
+  0% {
+    border-bottom: solid;
+    border-color: red;
+  }
+  25% {
+    border-color: red;
+  }
+  50% {
+    border-color: red;
+  }
+  75% {
+    border-color: red;
+  }
+  100% {
+    border-color: red;
+  }
+} */
 
 .button {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   margin: 2rem;
+}
+
+/* Responsive  */
+
+@media (width > 700px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (700px < width < 1000px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (width < 700px) {
+  .navbar {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (width<400px) {
+  .navbutton button {
+    display: none;
+  }
 }
