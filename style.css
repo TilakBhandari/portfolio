@@ -358,9 +358,3 @@ header {
     margin-bottom: 0px;
   }
 }
-
-@media (width<400px) {
-  .navbutton button {
-    display: none;
-  }
-}
