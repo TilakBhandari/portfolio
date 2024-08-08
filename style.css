@@ -43,6 +43,9 @@ header {
   gap: 2rem;
   display: flex;
 }
+.navbar li {
+  transition: all 0.3s linear;
+}
 .navbar li:hover {
   transform: scale(1.2);
   cursor: pointer;
@@ -81,6 +84,7 @@ header {
   text-align: center;
   font-size: 2.5rem;
   font-family: "Helttox Brush", sans-serif;
+  font-weight: 500;
 }
 .btn {
   font-size: 1.5rem;
@@ -125,6 +129,12 @@ header {
   background: var(--color_goldy);
   border-radius: 50%;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,9 +187,10 @@ header {
   transform: scale(1.7);
   margin: 1rem;
   color: white;
+  transition: transform 0.3s linear;
 }
 .socials i:hover {
-  transform: scale(2.2);
+  transform: scale(2.5);
   color: goldenrod;
   transition: transform 0.5s linear;
 }
@@ -195,14 +206,15 @@ header {
 /* button  */
 .btn {
   background: var(--color_goldy);
+
+  transition: all 0.4s ease-in 0s;
 }
 .btn:hover {
   background-color: goldenrod;
   color: white;
   transform: scale(1.04);
   box-shadow: -4px 4px 0.5px 0px rgba(255, 255, 255, 0.5);
-  transition: background 1s ease-in 0s;
-  transition: box-shadow 0.2s ease-in 0s;
+
   border-width: 3px;
   /* animation: btnborder; */
 }
@@ -232,6 +244,26 @@ header {
   margin: 2rem;
 }
 
+/* Hamburger  */
+.hamburger {
+  color: white;
+  transition: all 1s linear 0s;
+}
+.hamburger:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: goldenrod;
+  animation: rotate 0.3s linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
 /* Responsive  */
 
 @media (width > 700px) {
@@ -244,6 +276,37 @@ header {
   .logo {
     display: none;
   }
+
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 80vh;
+    position: relative;
+    right: 15%;
+  }
+  .main .button {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .main .btn1 {
+    width: auto;
+  }
+  .photo {
+    position: absolute;
+    top: 8%;
+    height: 50%;
+    opacity: 80%;
+    z-index: 1;
+  }
+  .content {
+    position: relative;
+    top: 20%;
+    z-index: 2;
+  }
+  .content .btn {
+    position: relative;
+    top: 0%;
+  }
 }
 
 @media (width < 700px) {
@@ -252,6 +315,47 @@ header {
   }
   .hamburger {
     display: flex;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 65vh;
+    position: relative;
+    right: 15%;
+  }
+  .photo {
+    position: absolute;
+    top: 8%;
+    height: 50%;
+    opacity: 80%;
+    z-index: 1;
+  }
+  .content {
+    position: relative;
+    top: 20%;
+    z-index: 2;
+  }
+  .content .btn {
+    position: relative;
+    top: 0%;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .socials ul {
+    display: flex;
+    align-items: flex-start;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
 }
 
